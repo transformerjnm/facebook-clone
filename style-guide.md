@@ -77,6 +77,7 @@ If a single-line comment overflows into multiple lines, it must use the multi-li
 - Semicolons are required
 - Use Let and Const for variables and not Var
 - Css classnames Use Camel Case naming convention
+- All functions must be declared in es6 
 
 
 
