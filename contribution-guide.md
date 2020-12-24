@@ -1,14 +1,14 @@
-#Branch Organization
+# Branch Organization
 
 Create pull requests of branches to the master branch. Code that is pushed to master must be working and not cause any breaking changes. 
 
 
-#Bugs and Feature Request
+# Bugs and Feature Request
 
 Use the project section of github to find out what our current focus is on and which task we have already started. Use Github issue section to create a new bug report or feature addition request. 
 
 
-#Sending a pull request
+# Sending a pull request
 
 1. Find a Github issue that is in the Projects Todos.
 2. Create a new branch from master branch.
@@ -22,7 +22,7 @@ Use the project section of github to find out what our current focus is on and w
 10. Once you have had your code review and fixed any errors you can then merge.
 
 
-#Git Commit Subject Line
+# Git Commit Subject Line
 
 A properly formed git commit subject line should always be able to complete the following.
 
@@ -31,7 +31,7 @@ A properly formed git commit subject line should always be able to complete the 
 - Is the issue fixed or still in progress
 
 
-#Git Commit Message
+# Git Commit Message
 
 A properly formed git commit message should always be able to complete the following.
 
