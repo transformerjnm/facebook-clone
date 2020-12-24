@@ -1,11 +1,11 @@
-#Component Structure - Atomic Design
-###Simple things make firm foundations
+# Component Structure - Atomic Design
+### Simple things make firm foundations
 
 The application is structured based on Atomic Design. The five levels from smallest to biggest are Atoms, Molecules, Organism, Templates, and pages. Strive to make components as small as possible and reusable. Check to see if a component already exists that you can use before creating a new one.
 Read this article to learn about Atomic Design [Atomic Web Design] (https://bradfrost.com/blog/post/atomic-web-design/).
 
 
-#Component Naming
+# Component Naming
 
 - All components names must start with a capital letter
 - All words within a component name should start with a capital letter
@@ -14,14 +14,14 @@ Read this article to learn about Atomic Design [Atomic Web Design] (https://brad
 - Use more than one word to name Organisms, Templates, and pages. This will ensure your component name is precise. 
 
 
-#Variable Naming
+# Variable Naming
 
 - Use camel case naming convention.
 - Use more than one word to name your variable. This will ensure your variable name is precise.
 - Booleans should have a prefix like is, are, or has. Example var isVisible = true;
 
 
-#Function Naming
+# Function Naming
 
 - Make all function names verbs and describe what the function does.
 - Use camel case naming convention.
@@ -29,7 +29,7 @@ Read this article to learn about Atomic Design [Atomic Web Design] (https://brad
 - Function names should not have a prefix of “set” unless it's part of a useState hook or Redux.
 
 
-#Vertical whitespace
+# Vertical whitespace
 
 A single blank line appears:
 
@@ -38,7 +38,7 @@ A single blank line appears:
 2. Within method bodies, sparingly to create logical groupings of statements. Blank lines at the start or end of a function body are not allowed.
 
 
-#Horizontal whitespace
+# Horizontal whitespace
 
 Beyond where required by the language or other style rules, and comments, a single space also appears in the following places only.
 
@@ -51,7 +51,7 @@ Beyond where required by the language or other style rules, and comments, a sing
 6. On both sides of the double slash (//) that begins an end-of-line comment. Here, multiple spaces are allowed, but not required.
 
 
-#Comment Format
+# Comment Format
 
 The basic formatting of comment blocks is as seen in this example:
 ```
@@ -70,7 +70,7 @@ this.foo_ = foo;
 If a single-line comment overflows into multiple lines, it must use the multi-line style with /** and */ on their own lines.
 
 
-#misc
+# misc
 
 - Indent using tabs
 - Nested elements must be indented
