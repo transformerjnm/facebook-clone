@@ -1,0 +1,30 @@
+{
+  "name": "facebook-clone",
+  "version": "1.0.0",
+  "description": "Welcome to facebook clone repository. The project is currently in progress and can’t be viewed on a web domain. Check back for more updates and to be able to view the project once it goes live.",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.11.9",
+    "node": "^15.4.0",
+    "nodemon": "^2.0.6",
+    "passport": "^0.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/transformerjnm/facebook-clone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/transformerjnm/facebook-clone/issues"
+  },
+  "homepage": "https://github.com/transformerjnm/facebook-clone#readme"
+}
