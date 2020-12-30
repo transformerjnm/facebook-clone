@@ -4,6 +4,7 @@
 The application is structured based on Atomic Design. The five levels from smallest to biggest are Atoms, Molecules, Organism, Templates, and pages. Strive to make components as small as possible and reusable. Check to see if a component already exists that you can use before creating a new one.
 Read this article to learn about Atomic Design [Atomic Web Design] (https://bradfrost.com/blog/post/atomic-web-design/).
 
+-All components should be functional using the template file "FunctionalComponent.js" (src/components/Templates/FunctionalComponent.js)
 
 # Component Naming
 
