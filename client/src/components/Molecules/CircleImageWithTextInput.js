@@ -1,4 +1,6 @@
 import { Input } from '@material-ui/core';  
+import CircleImage from '../Atoms/CircleImage';
+import TextInput from '../Atoms/TextInput';
 
 /**
  * Summary:

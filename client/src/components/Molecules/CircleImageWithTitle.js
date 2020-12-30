@@ -1,4 +1,5 @@
 import { } from '@material-ui/core';  
+import CircleImage from '../Atoms/CircleImage';
 
 /**
  * Summary:
