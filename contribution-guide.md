@@ -18,7 +18,7 @@ Use the project section of github to find out what our current focus is on and w
 6. Commit to your branch with the issue ID
 7. Push your changes to your branch
 8. Create a pull request
-9. Request Code review from other members
+9. Request Code review from other members (from two other developers)
 10. Once you have had your code review and fixed any errors you can then merge.
 
 
