@@ -8,10 +8,10 @@ Read this article to learn about Atomic Design [Atomic Web Design] (https://brad
 
 # Component Naming
 
-- All components names must start with a capital letter
+- All component names must start with a capital letter
 - All words within a component name should start with a capital letter
 - The name should tell you what the component does
-- Components names should be singular and a noun.
+- Component names should be singular and a noun.
 - Use more than one word to name Organisms, Templates, and pages. This will ensure your component name is precise. 
 
 
@@ -25,7 +25,7 @@ Read this article to learn about Atomic Design [Atomic Web Design] (https://brad
 # Function Naming
 
 - Make all function names verbs and describe what the function does.
-- Use camel case naming convention.
+- Use the camel case naming convention.
 - UseState function that sets the state must have a prefix of “set”. Redux actions also use the "set" prefix. example setOptionsMenuElements.
 - Function names should not have a prefix of “set” unless it's part of a useState hook or Redux.
 
