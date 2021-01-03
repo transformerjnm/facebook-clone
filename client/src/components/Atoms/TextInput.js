@@ -1,5 +1,5 @@
 import { Input } from '@material-ui/core';  
-
+import { FilledInput } from '@material-ui/core';
 /**
  * Summary:
  * Should be full width by default as most of our uses are going to be full width. Needs to be able to be used for comment input, search bar, and messages. Should have at least a 
@@ -10,9 +10,10 @@ import { Input } from '@material-ui/core';
  * fullWidth: if not passed default to true. if false set width to a certain width.
  */
 export default props => {
+	
   	return (
     	<>
-     		<p>Text Input</p>
+			 <FilledInput disableUnderline={true} />
     	</>
   	);
 }
