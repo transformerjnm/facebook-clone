@@ -19,12 +19,12 @@ export default props => {
 		height: "36px",
 		width: "36px",
 		borderRadius: "50%",
-	}
+	};
 	const circleImageContainer = {
 		position: 'relative',
 		width: '36px',
 		height: '36px'
-	}
+	};
 	const circleImageStyle= {
 		objectFit: "cover",
   		height: "36px",
@@ -32,7 +32,7 @@ export default props => {
 		borderRadius: "50%",
 		position: 'absolute',
 		bottom: '0'
-	}
+	};
 	const statusCircleStyles = {
 		width: '8px',
 		height: '8px',
@@ -44,7 +44,7 @@ export default props => {
 		right: '0',
 		margin: '5px',
 		border: `2px solid ${lightTheme.palette.primary.light}`
-	}
+	};
 
 	const showImageOrImageFallback = () => {
 		if (props.src) {
@@ -58,18 +58,18 @@ export default props => {
 				</div>		
 			); 
 		} else {
-			return <Paper style={paperStyle} />
+			return <Paper style={paperStyle} />;
 		}
-	}
+	};
 
 	const showOnlineCircle = () => {
 		if(props.isOnline) {
-			return <div style={statusCircleStyles} />
+			return <div style={statusCircleStyles} />;
 		}
-	}
+	};
   	return (
     	<> 
 			{ showImageOrImageFallback() }	
     	</>
   	);
-}
+};
