@@ -1,9 +1,11 @@
-import { Input } from '@material-ui/core';  
+import { useState } from 'react';  
 import { FilledInput, FormControl, IconButton, Grid } from '@material-ui/core';
 import { lightTheme } from '../../theme';  //light secondary main
 import SearchIcon from '@material-ui/icons/Search';
 import EmojiEmotionsIcon from '@material-ui/icons/EmojiEmotions';
 import ImageIcon from '@material-ui/icons/Image';
+import ThumbUpIcon from '@material-ui/icons/ThumbUp';
+import SendIcon from '@material-ui/icons/Send';
 /**
  * Summary:
  * Should be full width by default as most of our uses are going to be full width. Needs to be able to be used for comment input, search bar, and messages. Should have at least a 
@@ -11,9 +13,12 @@ import ImageIcon from '@material-ui/icons/Image';
  * 
  * Props: 
  * variant: search, message, comment (tells us which input to use)
+ * isTyping: a boolean that indicates if the user is typing or not
  * fullWidth: if not passed default to true. if false set width to a certain width.
  */
 export default props => {
+
+	const [isTyping, setIsTyping] = useState(false);
 
 	let input;
 
@@ -24,6 +29,28 @@ export default props => {
 	const messageStyles = {
 		padding: "4px",
 		minHeight: "25px"
+	};
+
+	const testDiv = {
+		height: '500px',
+		width: '500px',
+		backgroundColor: 'red'
+	};
+
+	const checkIfTyping = () => {
+		if(isTyping){
+			return(
+				<IconButton size="small">
+					<SendIcon color="secondary" />
+				</IconButton>
+			);
+		}else{
+			return(
+				<IconButton size="small">
+					<ThumbUpIcon color="secondary" />
+				</IconButton>
+			);
+		}
 	};
 
 	if(props.variant === "search"){
@@ -38,25 +65,35 @@ export default props => {
 					 />
 				</FormControl>;
 	} else if(props.variant === "message"){
-		input = <Grid container alignItems="center" justify="left">
-					<Grid item xs={1} md={1}>
+		input = <div style={testDiv}>
+			<Grid container alignItems="center">
+				<Grid item xs={3} md={2}>
+					<Grid container justify="flex-end">
 						<IconButton size="small">
-							<ImageIcon />
+							<ImageIcon color="secondary"/>
 						</IconButton>
 					</Grid>
-					<Grid item xs={3} md={3}>
-						<FilledInput 
-							style={messageStyles}
-							disableUnderline={true} 
-							margin="dense" 
-							placeholder="Aa" 
-							multiline
-							endAdornment={ <IconButton size="small">
-												<EmojiEmotionsIcon color="secondary"/>
-											</IconButton> } 
-						/>
+				</Grid>
+				<Grid item xs={7} md={8}>
+					<FilledInput 
+						style={messageStyles}
+						disableUnderline={true} 
+						margin="dense" 
+						placeholder="Aa" 
+						multiline
+						endAdornment={ <IconButton size="small">
+											<EmojiEmotionsIcon color="secondary"/>
+										</IconButton> }
+						onKeyPress={ () => setIsTyping(true) }
+					/>
+				</Grid>
+				<Grid item md={2}>
+					<Grid container alignItems="center" justify="flex-start">
+						{ checkIfTyping() }
 					</Grid>
-				</Grid>;
+				</Grid>
+			</Grid>
+		</div>;
 	}
 	
 	
