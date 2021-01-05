@@ -1,5 +1,5 @@
 import { useState } from 'react';  
-import { FilledInput, FormControl, IconButton, Grid } from '@material-ui/core';
+import { FilledInput, IconButton, Grid } from '@material-ui/core';
 import { lightTheme } from '../../theme';  //light secondary main
 import SearchIcon from '@material-ui/icons/Search';
 import EmojiEmotionsIcon from '@material-ui/icons/EmojiEmotions';
@@ -22,8 +22,9 @@ export default props => {
 
 	let input;
 
-	const formControlStyles = {
-		flexDirection: "row"
+	const searchStyles = {
+		padding: '4px',
+		minHeight: '30px'
 	};
 
 	const messageStyles = {
@@ -33,7 +34,7 @@ export default props => {
 
 	const testDiv = {
 		height: '500px',
-		width: '500px',
+		width: '300px',
 		backgroundColor: 'red'
 	};
 
@@ -54,46 +55,49 @@ export default props => {
 	};
 
 	if(props.variant === "search"){
-		input = <FormControl hiddenLabel fullWidth>
-					<FilledInput 
-						disableUnderline={true} 
-						margin="dense" 
-						placeholder="Search Facebook" 
-						startAdornment={ <IconButton>
-											<SearchIcon color="secondary"/>
-										 </IconButton> }
-					 />
-				</FormControl>;
+		input = <Grid container>
+					<Grid item>
+						<FilledInput
+							style={searchStyles} 
+							disableUnderline={true}  
+							placeholder="Search Facebook" 
+							startAdornment={ <IconButton>
+												<SearchIcon color="secondary"/>
+											</IconButton> }
+						/>
+					</Grid>
+				</Grid>;
 	} else if(props.variant === "message"){
 		input = <div style={testDiv}>
-			<Grid container alignItems="center">
-				<Grid item xs={3} md={2}>
-					<Grid container justify="flex-end">
-						<IconButton size="small">
-							<ImageIcon color="secondary"/>
-						</IconButton>
+					<Grid container alignItems="center">
+						<Grid item xs={3} md={2}>
+							<Grid container justify="flex-end">
+								<IconButton size="small">
+									<ImageIcon color="secondary"/>
+								</IconButton>
+							</Grid>
+						</Grid>
+						<Grid item xs={7} md={8}>
+							<FilledInput 
+								style={messageStyles}
+								disableUnderline={true} 
+								margin="dense" 
+								placeholder="Aa" 
+								multiline
+								fullWidth
+								endAdornment={ <IconButton size="small">
+													<EmojiEmotionsIcon color="secondary"/>
+												</IconButton> }
+								onKeyPress={ () => setIsTyping(true) }
+							/>
+						</Grid>
+						<Grid item md={2}>
+							<Grid container alignItems="center" justify="flex-start">
+								{ checkIfTyping() }
+							</Grid>
+						</Grid>
 					</Grid>
-				</Grid>
-				<Grid item xs={7} md={8}>
-					<FilledInput 
-						style={messageStyles}
-						disableUnderline={true} 
-						margin="dense" 
-						placeholder="Aa" 
-						multiline
-						endAdornment={ <IconButton size="small">
-											<EmojiEmotionsIcon color="secondary"/>
-										</IconButton> }
-						onKeyPress={ () => setIsTyping(true) }
-					/>
-				</Grid>
-				<Grid item md={2}>
-					<Grid container alignItems="center" justify="flex-start">
-						{ checkIfTyping() }
-					</Grid>
-				</Grid>
-			</Grid>
-		</div>;
+				</div>;
 	}
 	
 	
