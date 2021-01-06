@@ -6,6 +6,7 @@ import EmojiEmotionsIcon from '@material-ui/icons/EmojiEmotions';
 import ImageIcon from '@material-ui/icons/Image';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import SendIcon from '@material-ui/icons/Send';
+import CircleImage from './CircleImage';
 /**
  * Summary:
  * Should be full width by default as most of our uses are going to be full width which means the RextInput component must 
@@ -29,13 +30,14 @@ export default props => {
 
 	const messageStyles = {
 		padding: '4px',
+		borderRadius: '50px',
 		minHeight: '25px'
 	};
 
-	const testDiv = {
-		height: '500px',
-		width: '300px',
-		backgroundColor: 'red'
+	const commentStyles = {
+		padding: '4px',
+		borderRadius: '50px',
+		minHeight: '25px'
 	};
 
 	const checkIfTyping = () => {
@@ -91,6 +93,27 @@ export default props => {
 						<Grid container alignItems="center" justify="flex-start">
 							{ checkIfTyping() }
 						</Grid>
+					</Grid>
+				</Grid>;
+	}else if(props.variant === "comment"){
+		input = <Grid container alignItems="center" justify="flex-end">
+					<Grid item xs={2}>
+						<Grid container>
+							<CircleImage/>
+						</Grid>
+					</Grid>
+					<Grid item xs={10}>
+						<FilledInput 
+							style={commentStyles}
+							disableUnderline={true} 
+							margin="dense" 
+							placeholder="Write a comment..." 
+							multiline
+							fullWidth
+							endAdornment={ <IconButton size="small">
+												<EmojiEmotionsIcon color="secondary"/>
+											</IconButton> }
+						/>
 					</Grid>
 				</Grid>;
 	}
