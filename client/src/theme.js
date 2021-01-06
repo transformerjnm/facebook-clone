@@ -2,6 +2,15 @@ import { createMuiTheme } from '@material-ui/core/styles';
 
 /** Light Theme */
 export const lightTheme = createMuiTheme({
+  overrides: {
+    MuiIconButton: {
+      root: {
+        '&:hover': {
+          backgroundColor: '$labelcolor'
+        }
+      }
+    }
+  },
   palette: {
     primary: {
       light: '#ffffff',
