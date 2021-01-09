@@ -18,6 +18,7 @@ export const lightTheme = createMuiTheme({
 //Headers
 lightTheme.typography.h1 = {
   fontSize: 'calc(1rem + 5vmin)',
+
   color: '#05386B'
 };
 lightTheme.typography.h2 = {

@@ -1,4 +1,5 @@
-import { createMuiTheme, Typography } from '@material-ui/core';  
+import { createMuiTheme, Typography, IconButton, Icon} from '@material-ui/core';
+import ThumbUpIcon from '@material-ui/icons/ThumbUp'; 
 import CreateNewPost from '../Organisms/CreateNewPost';
 import HomePageHeader from '../Organisms/HomePageHeader';
 import UnorderedListOfImagesWithText from '../Organisms/UnorderedListOfImagesWithText';
@@ -24,6 +25,10 @@ export default props => {
 				<Typography variant="h5">Face Clones</Typography>
 				<Typography variant="h6">Face Clones</Typography>
 				<Typography variant="body1">Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77</Typography>
+
+				<Typography variant="h1">This is FASBOOK CLONE *Russian Accent*</Typography>
+				<Typography variant="subtitle1">Like this to be cool</Typography>
+				<IconButton><ThumbUpIcon /></IconButton>
 
 				 
     	</div>
