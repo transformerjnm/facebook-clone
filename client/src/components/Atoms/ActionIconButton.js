@@ -3,15 +3,12 @@ import { Box, Button, FormControl, IconButton } from '@material-ui/core';
  * Summary: 
  * Button that has text and a icon. When clicked it fires an action.
  * 
- * Props: 
- * buttonAction: a callback function that is fired when the ActionIconButton is fired
+ * Props:
+ * props.children: a icon that is wrapped within the opening and closing tags of this component 
+ * buttonAction: a callback function that is fired when the button component is clicked
  * buttonText: text that is shown next to the icon
  */
 export default props => {
-	let actionIconButton;
-	const iconButtonStyles = {
-		color: 'black'
-	};
 	const boxStyles = {
 		display: 'flex',
 		justifyContent: 'center'
@@ -20,7 +17,7 @@ export default props => {
 	return (
 		<>
 			<FormControl fullWidth hiddenLabel>
-				<Button style={iconButtonStyles}>
+				<Button onClick={() => props.buttonAction()}>
 					<Box mr={1.5} style={boxStyles}>
 						{props.children}
 					</Box>
