@@ -16,19 +16,8 @@ import ViewAndAddPostComment from '../Organisms/ViewAndAddPostComment';
  */
 export default props => {
   	return (
-    	<div theme={createMuiTheme}>
-     		<Typography variant="p">Home Page</Typography>
-				<Typography variant="h1">Face Clones</Typography>
-				<Typography variant="h2">Face Clones</Typography>
-				<Typography variant="h3">Face Clones</Typography>
-				<Typography variant="h4">Face Clones</Typography>
-				<Typography variant="h5">Face Clones</Typography>
-				<Typography variant="h6">Face Clones</Typography>
-				<Typography variant="body1">Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77</Typography>
-
-			
-
-				 
+    	<div>
+				Home Page
     	</div>
   	);
 }
