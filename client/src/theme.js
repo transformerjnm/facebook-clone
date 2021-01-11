@@ -18,7 +18,6 @@ export const lightTheme = createMuiTheme({
 //Headers
 lightTheme.typography.h1 = {
   fontSize: 'calc(1rem + 5vmin)',
-
   color: '#05386B'
 };
 lightTheme.typography.h2 = {
@@ -38,7 +37,7 @@ lightTheme.typography.h5 = {
   color: '#05386B'
 };
 lightTheme.typography.h6 = {
-  fontSize: 'calc(1rem + 0vmin)',
+  fontSize: 'calc(1rem + .5vmin)',
   color: '#05386B'
 };
 
@@ -50,6 +49,6 @@ lightTheme.typography.subtitle1 = {
   color: '#313639'
 }
 lightTheme.typography.body1 = {
-  fontSize: 'calc(.75rem + .5vmin)',
+  fontSize: 'calc(.8rem + 1vmin)',
   color: '#313639'
 }

@@ -26,9 +26,7 @@ export default props => {
 				<Typography variant="h6">Face Clones</Typography>
 				<Typography variant="body1">Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77Todai we r coding sTu77</Typography>
 
-				<Typography variant="h1">This is FASBOOK CLONE *Russian Accent*</Typography>
-				<Typography variant="subtitle1">Like this to be cool</Typography>
-				<IconButton><ThumbUpIcon /></IconButton>
+			
 
 				 
     	</div>
