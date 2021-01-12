@@ -48,6 +48,10 @@ lightTheme.typography.h4 = {
 lightTheme.typography.h5 = {
   fontSize: 'calc(1rem + 1vmin)'
 };
+lightTheme.typography.h6 = {
+  fontSize: 'calc(1rem + .5vmin)',
+  color: '#05386B'
+};
 
 //more typography
 lightTheme.typography.subtitle1 = {
@@ -56,5 +60,7 @@ lightTheme.typography.subtitle1 = {
   fontWeight: 'normal'
 };
 lightTheme.typography.body1 = {
-  fontSize: 'calc(.75rem + .5vmin)'
-};
+  fontSize: 'calc(.8rem + 1vmin)',
+  color: '#313639'
+}
+
