@@ -1,4 +1,4 @@
-import { ListItem } from '@material-ui/core';
+import { List, ListItem, ListItemText, ListItemIcon } from '@material-ui/core';
 import CircleImage from '../Atoms/CircleImage';
 
 /**
@@ -12,9 +12,19 @@ import CircleImage from '../Atoms/CircleImage';
  * action
  */
 export default props => {
+	const listItemIconStyles = {
+		marginLeft: 'auto'
+	};
+
   	return (
     	<div>
       		<p>ListItemWIthImageAndText</p>
+			<List>
+				<ListItem button>
+					<ListItemIcon children={props.children}/>
+					<ListItemText primary={props.text}/>
+				</ListItem>
+			</List>
     	</div>
   	);
 }
