@@ -15,16 +15,13 @@ export default props => {
 	const listItemIconStyles = {
 		marginLeft: 'auto'
 	};
-
+	
   	return (
-    	<div>
-      		<p>ListItemWIthImageAndText</p>
-			<List>
-				<ListItem button>
-					<ListItemIcon children={props.children}/>
-					<ListItemText primary={props.text}/>
-				</ListItem>
-			</List>
-    	</div>
+    	<>
+			<ListItem button>
+				<ListItemIcon children={props.children} />
+				<ListItemText primary={props.text} style={{marginLeft: '6px'}}/>
+			</ListItem>
+    	</>
   	);
 }
