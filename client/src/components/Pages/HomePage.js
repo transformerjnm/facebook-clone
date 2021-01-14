@@ -5,8 +5,6 @@ import HomePageHeader from '../Organisms/HomePageHeader';
 import UnorderedListOfImagesWithText from '../Organisms/UnorderedListOfImagesWithText';
 import UserPost from '../Organisms/UserPost';
 import ViewAndAddPostComment from '../Organisms/ViewAndAddPostComment';
-import CircleImageWithTextInput from '../Molecules/CircleImageWithTextInput';
-import TextInput from '../Atoms/TextInput';
 
 // import lightTheme from '../../theme';
 /**
