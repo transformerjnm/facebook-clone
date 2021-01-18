@@ -15,7 +15,7 @@ import { lightTheme } from '../../theme';
  */
 export default props => {
 	return (
-		<Grid container spacing={1}>
+		<Grid container spacing={1} alignItems="center">
 			<Grid item >
 				<CircleImage src={props.imageUrl} alt={props.imageAlt} clickAction={props.imageClick} />
 			</Grid>
