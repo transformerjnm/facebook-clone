@@ -16,8 +16,6 @@ import ViewAndAddPostComment from '../Organisms/ViewAndAddPostComment';
  */
 export default props => {
   	return (
-    	<div>
-				Home Page
-    	</div>
+    	<p>Hello World. Welcome to the Home Page!</p>
   	);
 }
