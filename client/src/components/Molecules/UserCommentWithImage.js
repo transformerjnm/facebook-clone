@@ -1,22 +1,27 @@
 import { Grid, Typography } from '@material-ui/core';  
-import CircleImage from '../Atoms/CircleImage';
 import { lightTheme } from '../../theme';
+import { NavLink } from 'react-router-dom'
 /**
  * Summary:
  * A comment that has the users profile picture, username, and comment.
  * 
  * Props: 
- * children: CircleImage that is wrapped by this component
- * Name
- * AuthorComment
+ * children: CircleImage of the author that is wrapped by this component
+ * authorName: the author of the comment
+ * authorComment: the comment of the author
+ * navLinkDestination: url link that redirects the browser
  * 
  */
 export default props => {
-	const commentContainer = {
+	const commentContainerStyles = {
 		width: 'auto',
-		backgroundColor: 'lightgrey',
+		backgroundColor: lightTheme.palette.primary.main,
 		borderRadius: '15px',
 		padding: '.25rem' 
+	};
+	const navLinkStyles = {
+		color: lightTheme.palette.text.primary,
+		textDecoration: 'none'
 	};
 	return (
 		<Grid container alignContent="center" spacing={1}>
@@ -26,12 +31,20 @@ export default props => {
 				</Grid>
 			</Grid>
 			<Grid item>
-				<div style={commentContainer}>
+				<div style={commentContainerStyles}>
 					<Grid container>
 						<Grid item xs={12}>
-							<Typography variant="subtitle2">
-								{props.name}
-							</Typography>
+							<NavLink 
+								to={props.navLinkDestination}
+								style={navLinkStyles}
+							>
+								<Typography 
+									variant="subtitle2"
+									style={{fontWeight: 'bold'}}
+								>
+									{props.name}
+								</Typography>
+							</NavLink>
 						</Grid>
 						<Grid item>
 							<Typography variant="body2">
@@ -43,21 +56,21 @@ export default props => {
 				<Grid container>
 					<Grid item xs={1}>
 						<Grid container>
-							<Typography variant="body2">
+							<Typography variant="subtitle2">
 								Like
 							</Typography>
 						</Grid>
 					</Grid>
 					<Grid item xs={1}>
 						<Grid container>
-							<Typography variant="body2">
+							<Typography variant="subtitle2">
 								Reply
 							</Typography>
 						</Grid>
 					</Grid>
 					<Grid item xs={1}>
 						<Grid container justify="center">
-							<Typography variant="body2">
+							<Typography variant="subtitle2">
 								{props.timePosted}
 							</Typography>
 						</Grid>
