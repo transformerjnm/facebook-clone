@@ -1,7 +1,12 @@
 import { createMuiTheme } from '@material-ui/core/styles';
-
 /** Light Theme */
 export const lightTheme = createMuiTheme({
+  typography: {
+    fontFamily: [
+      'Arial',
+      'sans-serif',
+    ].join(','),
+  },
   palette: {
     background: {
       default: "#f0f2f5"

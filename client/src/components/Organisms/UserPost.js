@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardContent, CardActions, CardMedia, Typography } from '@material-ui/core';
+import { Card, CardContent, CardActions, Typography, Grid } from '@material-ui/core';
 import PostInteractionCluster from '../Molecules/PostInteractionCluster';
 import CircleImageWithTitle from '../Molecules/CircleImageWithTitle';
 import Image from 'material-ui-image'
@@ -43,16 +43,113 @@ export default props => {
 					alt={props.postImages[0].imageAlt}
 					imageStyle={{
 						Height: "500px",
-						width: "auto",
-						left: "50%",
-						transform: "translateX(-50%)"
+						width: "100%",
 					}}
 					/**
-					 *  style paddingTop makes the height of a div that it loads in the same height of the image.
+					 * style paddingTop makes the height of a div that it loads in the same height of the image.
 					 * The attribute iconContainerStyle did not work so I had to use inline styles.					
 					*/
 					style={{ paddingTop: "500px" }}
 				/>
+			);
+		} else if (props.postImages.length === 2) {
+			return (
+				<Grid
+					container
+					spacing={1}
+					direction="row"
+				>
+					<Grid item xs={6}>
+						<Image
+							src={props.postImages[0].imageSrc}
+							alt={props.postImages[0].imageAlt}
+							imageStyle={{
+								Height: "500px",
+								width: "100%",
+							}}
+							/**
+							 * style paddingTop makes the height of a div that it loads in the same height of the image.
+							 * The attribute iconContainerStyle did not work so I had to use inline styles.					
+							*/
+							style={{ paddingTop: "500px" }}
+						/>
+					</Grid>
+					<Grid item xs={6}>
+						<Image
+							src={props.postImages[1].imageSrc}
+							alt={props.postImages[1].imageAlt}
+							imageStyle={{
+								Height: "500px",
+								width: "100%",
+							}}
+							/**
+							 * style paddingTop makes the height of a div that it loads in the same height of the image.
+							 * The attribute iconContainerStyle did not work so I had to use inline styles.					
+							*/
+							style={{ paddingTop: "500px" }}
+						/>
+					</Grid>
+				</Grid>
+			);
+		} else if (props.postImages.length > 2) {
+			return (
+				<Grid
+					container
+					direction="row"
+					spacing={1}
+				>
+					<Grid item xs={6} >
+						<Image
+							src={props.postImages[0].imageSrc}
+							alt={props.postImages[0].imageAlt}
+							imageStyle={{
+								Height: "500px",
+								width: "100%",
+							}}
+							/**
+							 * style paddingTop makes the height of a div that it loads in the same height of the image.
+							 * The attribute iconContainerStyle did not work so I had to use inline styles.					
+							*/
+							style={{ paddingTop: "500px" }}
+						/>
+					</Grid>
+					<Grid item xs={6}>
+						<Grid container direction="column" spacing={1}>
+							<Grid item xs={12}>
+								<Image
+									src={props.postImages[1].imageSrc}
+									alt={props.postImages[1].imageAlt}
+									imageStyle={{
+										Height: "246px",
+										width: "100%"
+									}}
+									/**
+									 * style paddingTop makes the height of a div that it loads in the same height of the image.
+									 * The attribute iconContainerStyle did not work so I had to use inline styles.
+									 * minus the spacing for the grid so that the images all line up.					
+									*/
+									style={{ paddingTop: "246px" }}
+								/>
+							</Grid>
+							<Grid item xs={12}>
+								<Image
+									src={props.postImages[2].imageSrc}
+									alt={props.postImages[2].imageAlt}
+									imageStyle={{
+										Height: "246px",
+										width: "100%"
+									}}
+									/**
+									 * style paddingTop makes the height of a div that it loads in the same height of the image.
+									 * The attribute iconContainerStyle did not work so I had to use inline styles.		
+									 * minus the spacing for the grid so that the images all line up.				
+									*/
+									style={{ paddingTop: "246px" }}
+								/>
+							</Grid>
+						</Grid>
+					</Grid>
+				</Grid >
 			);
 		}
 	};
@@ -84,4 +181,4 @@ export default props => {
 			</CardActions>
 		</Card>
 	);
-}
+};
