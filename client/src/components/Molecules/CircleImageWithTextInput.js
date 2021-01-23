@@ -1,4 +1,4 @@
-import { Grid } from '@material-ui/core';  
+import { Grid } from '@material-ui/core';
 import CircleImage from '../Atoms/CircleImage';
 import TextInput from '../Atoms/TextInput';
 
@@ -12,17 +12,17 @@ import TextInput from '../Atoms/TextInput';
  * imageSrc: string image Url
  * imageAlt: string image alt for given image
  * onInputSubmit: function to run when the input is submitted
- * onImageClick: function to run when the image is clicked
+ * onImageClickDestination: string url to redirect to on click
  * isOnline: optional boolean for if the user should be displayed as online.
  */
 export default props => {
 	return (
 		<Grid container spacing={1}>
 			<Grid item>
-				<CircleImage isOnline={ props.isOnline? props.isOnline : false } src={props.imageSrc} alt={props.imageAlt} clickAction={props.onImageClick}/>
+				<CircleImage isOnline={props.isOnline ? props.isOnline : false} src={props.imageSrc} alt={props.imageAlt} onImageClickDestination={props.onImageClickDestination} />
 			</Grid>
-			<Grid item>
-				<TextInput variant={props.inputVariant} submitInputValue={props.onInputSubmit}/>
+			<Grid item style={{ width: "calc(100% - 60px)" }}>
+				<TextInput variant={props.inputVariant} submitInputValue={props.onInputSubmit} />
 			</Grid>
 		</Grid>
 	);

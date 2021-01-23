@@ -1,6 +1,6 @@
-import { Paper } from '@material-ui/core';  
+import { Paper } from '@material-ui/core';
 import { lightTheme } from '../../theme';
-
+import { NavLink } from 'react-router-dom'
 /**
  * Summary:
  * Takes in an image and displays it as a circle. All instances and uses of circle images should be the same size. On hover should show pop up with information about the user if passed in.
@@ -8,7 +8,7 @@ import { lightTheme } from '../../theme';
  * Props: 
  * src: image url
  * alt: image alt
- * clickAction: option prop that if provided will be ran onClick on image. could be a link to a profile or open messenger.
+ * onImageClickDestination: string url to redirect to once the image has been clicked
  * isOnline: boolean if user is online
  * 
  * HoverInformation is being delayed until further notice. Once we get data structure setup and know what its going to display we can create it.
@@ -26,9 +26,9 @@ export default props => {
 		height: '40px',
 		marginLeft: 'auto'
 	};
-	const circleImageStyle= {
+	const circleImageStyle = {
 		objectFit: "cover",
-  		height: "40px",
+		height: "40px",
 		width: "40px",
 		borderRadius: "50%",
 		position: 'absolute',
@@ -52,29 +52,27 @@ export default props => {
 			if (!props.alt) {
 				console.log("circle image is missing alt for " + props.src);
 			}
-			return (	
-				<div style={circleImageContainer} onClick={(event) => {
-					if(props.clickAction) {
-						props.clickAction(event);
-					}
-				}}>		
-					<img style={circleImageStyle} src={props.src} alt={props.alt} />	
-					{ showOnlineCircle() }
-				</div>		
-			); 
+			return (
+				<NavLink to={props.onImageClickDestination}>
+					<div style={circleImageContainer} >
+						<img style={circleImageStyle} src={props.src} alt={props.alt} />
+						{showOnlineCircle()}
+					</div>
+				</NavLink>
+			);
 		} else {
 			return <Paper style={paperStyle} />;
 		}
 	};
 
 	const showOnlineCircle = () => {
-		if(props.isOnline) {
+		if (props.isOnline) {
 			return <div style={statusCircleStyles} />;
 		}
 	};
-  	return (
-    	<> 
-			{ showImageOrImageFallback() }	
-    	</>
-  	);
+	return (
+		<>
+			{ showImageOrImageFallback()}
+		</>
+	);
 };
