@@ -2,6 +2,7 @@ import { Paper } from '@material-ui/core';
 import UserCommentWithImage from '../Molecules/UserCommentWithImage';
 import CircleImageWithTextInput from '../Molecules/CircleImageWithTextInput';
 import CircleImage from '../Atoms/CircleImage';
+import { lightTheme } from '../../theme';
 
 /**
  * Summary:
@@ -30,6 +31,7 @@ import CircleImage from '../Atoms/CircleImage';
  *
  */
 export default props => {
+	let arrayOfUserComments = [];
 	/** 
 	 * Calculate time since comment has been posted and return a string of time since posted in shorthand
 	 * shorthand example: 6m 5d 1w 8m 1y
@@ -47,13 +49,29 @@ export default props => {
 	 * render all the comments to the screen
 	 */
 	const renderCommentsToScreen = () => {
-		props.comments.foreach(() => {
-
+		props.comments.foreach((comment) => {
+			arrayOfUserComments.push(
+				<>
+					<UserCommentWithImage
+						authorName={comment.commentAuthorName}
+						authorComment={comment.commentMessage}
+						navLinkDestination={comment.commentAuthorProfileUrl}
+						timePosted={calculateTimeSincePosted(comment.commentPostDate)}
+					>
+						<CircleImage
+							src={comment.commentAuthorProfileImage}
+							onImageClickDestination={comment.commentAuthorProfileUrl}
+							isOnline={false}
+							alt={`Picture of ${comment.commentAuthorName}`}
+						/>
+					</UserCommentWithImage>
+				</>
+			);
 		});
 	};
 
 	return (
-		<Paper>
+		<Paper elevation={1} style={{ padding: lightTheme.spacing(1) }}>
 			<CircleImageWithTextInput
 				inputVariant="comment"
 				imageSrc={props.authenticatedUser.authenticatedProfileImage}
