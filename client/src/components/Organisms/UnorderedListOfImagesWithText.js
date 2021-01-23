@@ -7,14 +7,13 @@ import { lightTheme } from '../../theme';
  * 
  * Props: 
  * listItemsArray: array of objects where each object contains the image, title, and action.
- * variant: a string that states which type of unordered list is rendered: sidebar or contacts
  */
 export default props => {
 	var listItemsArray = [];
 	const renderListItemsToScreen = () => {
 		props.listItemsArray.forEach(item => {
 			listItemsArray.push(
-				<ListItemWithImageAndText text={item.name}>
+				<ListItemWithImageAndText text={item.name} action={item.action}>
 					{item.image}
 				</ListItemWithImageAndText>
 			);
