@@ -1,7 +1,6 @@
-import { useState } from 'react';
 import { List, ListItem, ListItemText, Paper } from '@material-ui/core';  
 import ListItemWithImageAndText from '../Molecules/ListItemWithImageAndText';
-
+import { lightTheme } from '../../theme';
 /**
  * Summary:
  * Displays a unordered list of images with text from an array that you can click on.
@@ -22,7 +21,8 @@ export default props => {
 		});
 	};
 	const paperStyles = {
-		width: '25vw'
+		width: '25vw',
+		backgroundColor: lightTheme.palette.primary.main
 	};
 	return (
 		<>
