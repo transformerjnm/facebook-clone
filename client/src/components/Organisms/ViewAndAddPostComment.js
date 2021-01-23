@@ -3,6 +3,7 @@ import UserCommentWithImage from '../Molecules/UserCommentWithImage';
 import CircleImageWithTextInput from '../Molecules/CircleImageWithTextInput';
 import CircleImage from '../Atoms/CircleImage';
 import { lightTheme } from '../../theme';
+import { Fragment } from 'react';
 
 /**
  * Summary:
@@ -32,6 +33,7 @@ import { lightTheme } from '../../theme';
  */
 export default props => {
 	let arrayOfUserComments = [];
+	let commentsKey = 1;
 	/** 
 	 * Calculate time since comment has been posted and return a string of time since posted in shorthand
 	 * shorthand example: 6m 5d 1w 8m 1y
@@ -49,10 +51,12 @@ export default props => {
 	 * render all the comments to the screen
 	 */
 	const renderCommentsToScreen = () => {
-		props.comments.foreach((comment) => {
+		props.comments.forEach((comment) => {
+			++commentsKey;
 			arrayOfUserComments.push(
-				<>
+				<Fragment key={commentsKey}>
 					<UserCommentWithImage
+
 						authorName={comment.commentAuthorName}
 						authorComment={comment.commentMessage}
 						navLinkDestination={comment.commentAuthorProfileUrl}
@@ -65,11 +69,11 @@ export default props => {
 							alt={`Picture of ${comment.commentAuthorName}`}
 						/>
 					</UserCommentWithImage>
-				</>
+				</Fragment>
 			);
 		});
 	};
-
+	renderCommentsToScreen();
 	return (
 		<Paper elevation={1} style={{ padding: lightTheme.spacing(1) }}>
 			<CircleImageWithTextInput
@@ -80,19 +84,7 @@ export default props => {
 				onImageClickDestination={props.authenticatedUser.authenticatedProfileImage}
 				isOnline={true}
 			/>
-			<UserCommentWithImage
-				authorName={props.comments[0].commentAuthorName}
-				authorComment={props.comments[0].commentMessage}
-				navLinkDestination={props.comments[0].commentAuthorProfileUrl}
-				timePosted={calculateTimeSincePosted(props.comments[0].commentPostDate)}
-			>
-				<CircleImage
-					src={props.comments[0].commentAuthorProfileImage}
-					onImageClickDestination={props.comments[0].commentAuthorProfileUrl}
-					isOnline={false}
-					alt={`Picture of ${props.comments[0].commentAuthorName}`}
-				/>
-			</UserCommentWithImage>
+			{arrayOfUserComments}
 		</Paper>
 	);
 }
