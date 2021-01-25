@@ -23,7 +23,7 @@ export default props => {
 			keyForEachListItem++;
 		});
 	};
-	console.log(listItemsArray)
+	
 	return (
 		<div>
 			<List>
