@@ -11,8 +11,8 @@ import { lightTheme } from '../../theme';
  * variant: a string that states which type of unordered list is rendered: sidebar or contacts
  */
 export default props => {
-	var listItemsArray = [];
-	var keyForEachListItem = 1;
+	let listItemsArray = [];
+	let keyForEachListItem = 1;
 	const renderListItemsToScreen = () => {
 		props.listItemsArray.forEach(item => {
 			listItemsArray.push(
@@ -20,13 +20,12 @@ export default props => {
 					{item.image}
 				</ListItemWithImageAndText>
 			);
+			keyForEachListItem++;
 		});
 	};
-	const containerStyles = {
-		backgroundColor: lightTheme.palette.primary.main
-	};
+	console.log(listItemsArray)
 	return (
-		<div style={containerStyles}>
+		<div>
 			<List>
 				{renderListItemsToScreen()}
 				{listItemsArray}
