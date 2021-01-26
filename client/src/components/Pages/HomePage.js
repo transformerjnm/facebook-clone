@@ -1,4 +1,4 @@
-import { createMuiTheme, Typography, IconButton, Icon } from '@material-ui/core';
+import { createMuiTheme, Typography, IconButton, Icon, Container } from '@material-ui/core';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import CreateNewPost from '../Organisms/CreateNewPost';
 import HomePageHeader from '../Organisms/HomePageHeader';

@@ -1,4 +1,4 @@
-import { Typography, Grid, Divider } from '@material-ui/core';  
+import { Typography, Grid, Divider } from '@material-ui/core';
 import ActionIconButton from '../Atoms/ActionIconButton';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
@@ -27,10 +27,10 @@ export default props => {
 	 * Also contains the light grey line divider that divides the interaction buttons and the number of interaction section.
 	 */
 	let showNumberOfInteractions = () => {
-		if(props.numberOfPostShares > 0 || props.numberOfPostLikes > 0 || props.numberOfPostComments > 0) {
+		if (props.numberOfPostShares > 0 || props.numberOfPostLikes > 0 || props.numberOfPostComments > 0) {
 			return (
 				<>
-					<Grid item xs="6" style={{padding: '.5rem 0'}}>
+					<Grid item xs="6" style={{ padding: '.5rem 0' }}>
 						<Grid container justify="flex-start">
 							<Grid item>
 								<ThumbUpIcon style={secondaryTextStyle} fontSize="small" />
@@ -40,7 +40,7 @@ export default props => {
 							</Grid>
 						</Grid>
 					</Grid>
-					<Grid item xs="6" style={{padding: '.5rem 0'}}>
+					<Grid item xs="6" style={{ padding: '.5rem 0' }}>
 						<Grid container justify="flex-end">
 							<Grid item>
 								<Typography style={secondaryTextStyle} variant="subtitle1">
@@ -51,7 +51,7 @@ export default props => {
 					</Grid>
 					<Grid item xs="12">
 						<Divider />
-					</Grid>	
+					</Grid>
 				</>
 			);
 		}
@@ -59,15 +59,15 @@ export default props => {
 	return (
 		<Grid container alignContent="center">
 			{showNumberOfInteractions()}
-			<Grid item xs="4">
+			<Grid item xs={4}>
 				<ActionIconButton buttonText="Like" buttonAction={props.addLikeToPost}><ThumbUpAltIcon style={secondaryTextStyle} /></ActionIconButton>
 			</Grid>
-			<Grid item xs="4">
+			<Grid item xs={4}>
 				<ActionIconButton buttonText="Comment" buttonAction={props.openCommentsForPost}><ChatBubbleOutlineIcon style={secondaryTextStyle} /></ActionIconButton>
 			</Grid>
-			<Grid item xs={4}>								
+			<Grid item xs={4}>
 				<ActionIconButton buttonText="Share" buttonAction={props.sharePost}><ReplyIcon style={secondaryTextStyle} /></ActionIconButton>
 			</Grid>
-    	</Grid>
-  	);
+		</Grid>
+	);
 };
