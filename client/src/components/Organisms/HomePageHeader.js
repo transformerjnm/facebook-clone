@@ -1,4 +1,8 @@
-import { } from '@material-ui/core';  
+import { Grid } from '@material-ui/core';  
+import NavigationIconLink from '../Atoms/NavigationIconLink';
+import TextInput from '../Atoms/TextInput';
+import CircleImage from '../Atoms/CircleImage';
+import FacebookIcon from '@material-ui/icons/Facebook';
 
 /**
  * Summary:
@@ -9,9 +13,19 @@ import { } from '@material-ui/core';
  * 
  */
 export default props => {
+	const headerContainer = {
+		height: '56px'
+	};
+
   	return (
-    	<div>
-     		<p>Home Page Header</p>
+    	<div style={headerContainer}>
+     		<Grid container>
+				<Grid item>
+					<Grid container>
+						
+					</Grid>
+				</Grid>
+			 </Grid>
     	</div>
   	);
 }
