@@ -23,8 +23,7 @@ export default props => {
 	const circleImageContainer = {
 		position: 'relative',
 		width: '40px',
-		height: '40px',
-		marginLeft: 'auto'
+		height: '40px'
 	};
 	const circleImageStyle = {
 		objectFit: "cover",
