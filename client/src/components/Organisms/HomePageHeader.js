@@ -3,7 +3,7 @@ import NavigationIconLink from '../Atoms/NavigationIconLink';
 import TextInput from '../Atoms/TextInput';
 import CircleImageWithTextInput from '../Molecules/CircleImageWithTextInput';
 import HomeIcon from '@material-ui/icons/Home';
-
+import LiveTvIcon from '@material-ui/icons/LiveTv';
 /**
  * Summary:
  * Responsive header for navigating the application. At the current stage in development we want this to be responsive and have dummy links.
@@ -33,16 +33,18 @@ export default props => {
 					</Grid>
 				</Grid>
 				<Grid item>
-						<Grid container alignItems="center">
-							<Grid item>
-								<NavigationIconLink navLinkDestination="/home">
-									<HomeIcon />
-								</NavigationIconLink>
-								<NavigationIconLink navLinkDestination="/">
-									<HomeIcon/>
-								</NavigationIconLink>
-							</Grid>
+					<Grid container justify="center">
+						<Grid item>
+							<NavigationIconLink navLinkDestination="/home">
+								<HomeIcon />
+							</NavigationIconLink>
 						</Grid>
+						<Grid item>
+							<NavigationIconLink navLinkDestination="/live">
+								<LiveTvIcon />
+							</NavigationIconLink>
+						</Grid>
+					</Grid>
 				</Grid>
 			 </Grid>
     	</div>
