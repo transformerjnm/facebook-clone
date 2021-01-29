@@ -1,4 +1,4 @@
-import { Paper, Divider, Grid } from '@material-ui/core';
+import { Paper, Divider, Grid, Hidden } from '@material-ui/core';
 import CircleImageWithTextInput from '../Molecules/CircleImageWithTextInput';
 import ActionIconButton from '../Atoms/ActionIconButton';
 import VideoCallIcon from '@material-ui/icons/VideoCall';
@@ -20,11 +20,25 @@ import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
  * 		onInputSubmit: function to run when the input is submitted
  * 		onImageClickDestination: string url to redirect to on click
  * 		isOnline: optional boolean for if the user should be displayed as online.
+ * 
  */
 export default props => {
 	const iconHeightStyles = {
 		fontsize: "24px"
-	}
+	};
+
+	let startLiveVideo = () => {
+		console.log("Start live video");
+	};
+
+	let createImagePost = () => {
+		console.log("Create image Post");
+	};
+
+	let updateFeeling = () => {
+		console.log("feeling");
+	};
+
 	return (
 		<Paper style={{ padding: "1rem" }}>
 			<CircleImageWithTextInput
@@ -36,16 +50,19 @@ export default props => {
 			/>
 			<Divider style={{ margin: ".5rem" }} />
 			<Grid container alignContent="center">
-				<Grid item xs={4}>
-					<ActionIconButton buttonText="Live Video" buttonAction={props.addLikeToPost}><VideoCallIcon color="error" style={iconHeightStyles} /></ActionIconButton>
+				<Hidden smDown>
+					<Grid item xs={0} sm={4} >
+						<ActionIconButton buttonText="Live Video" buttonAction={startLiveVideo}><VideoCallIcon color="error" style={iconHeightStyles} /></ActionIconButton>
+					</Grid>
+				</Hidden>
+				<Grid item xs={6} md={4}>
+					<ActionIconButton buttonText="Photo/Video" buttonAction={createImagePost}><PhotoLibraryIcon style={iconHeightStyles, { color: "green" }} /></ActionIconButton>
 				</Grid>
-				<Grid item xs={4}>
-					<ActionIconButton buttonText="Photo/Video" buttonAction={props.openCommentsForPost}><PhotoLibraryIcon style={iconHeightStyles, { color: "green" }} /></ActionIconButton>
-				</Grid>
-				<Grid item xs={4}>
-					<ActionIconButton buttonText="Feeling/Activity" buttonAction={props.sharePost}><InsertEmoticonIcon style={iconHeightStyles, { color: "#f5bb41" }} /></ActionIconButton>
+
+				<Grid item xs={6} md={4}>
+					<ActionIconButton buttonText="Feeling/Activity" buttonAction={updateFeeling}><InsertEmoticonIcon style={iconHeightStyles, { color: "#f5bb41" }} /></ActionIconButton>
 				</Grid>
 			</Grid>
 		</Paper>
 	);
-}
+};
