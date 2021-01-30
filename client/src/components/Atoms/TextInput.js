@@ -5,6 +5,7 @@ import EmojiEmotionsIcon from '@material-ui/icons/EmojiEmotions';
 import ImageIcon from '@material-ui/icons/Image';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import SendIcon from '@material-ui/icons/Send';
+import { lightTheme } from '../../theme';
 
 /**
  * Summary:
@@ -54,7 +55,7 @@ export default ({ variant }) => {
 					disableUnderline={true}  
 					placeholder="Search Facebook" 
 					startAdornment={ 
-						<SearchIcon color="primary"/>
+						<SearchIcon color={lightTheme.palette.primary.light}/>
 					}
 				/>
 			</FormControl>

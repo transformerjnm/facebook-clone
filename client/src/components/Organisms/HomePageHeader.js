@@ -7,6 +7,9 @@ import StorefrontIcon from '@material-ui/icons/Storefront';
 import GroupIcon from '@material-ui/icons/Group';
 import CircleImageWithTitle from '../Molecules/CircleImageWithTitle';
 import AddIcon from '@material-ui/icons/Add';
+import MessageIcon from '@material-ui/icons/Message';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import { lightTheme } from '../../theme';
 /**
  * Summary:
@@ -37,8 +40,8 @@ export default props => {
 						</Grid>
 					</Grid>
 				</Grid>
-				<Grid item md={5}>
-					<Grid container justify="center">
+				<Grid item md={6}>
+					<Grid container justify="center" alignItems="center">
 						<Grid item>
 							<NavigationIconLink navLinkDestination="/home">
 								<HomeIcon />
@@ -61,21 +64,43 @@ export default props => {
 						</Grid>
 					</Grid>
 				</Grid>
-				<Grid item md={4}>
-					<Grid container alignItems="center" justify="flex-start" spacing={4}>
+				<Grid item md={3}>
+					<Grid container alignItems="center" justify="center" spacing={4}>
 						<Grid item>
-							<CircleImageWithTitle 
-								imageUrl="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bWFufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=60"
-								imageAlt="authenticated user"
-								imageClick="/"
-								title="blaine"
-							/>
+							<Grid container justify="flex-start">
+								<CircleImageWithTitle 
+									imageUrl="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8bWFufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1100&q=60"
+									imageAlt="authenticated user"
+									imageClick="/"
+									title="blaine"
+								/>
+							</Grid>
 						</Grid>
 						<Grid item>
-							<Grid container justify="flex-end">
-									<IconButton style={{backgroundColor: lightTheme.palette.primary.main }}>
-										<AddIcon/>
-									</IconButton>
+							<Grid container justify="flex-end" spacing={1}>
+									<Grid item>
+										<IconButton 
+											style={{backgroundColor: lightTheme.palette.primary.main }}
+											size="medium"
+										>
+											<AddIcon/>
+										</IconButton>
+									</Grid>
+									<Grid item>
+										<IconButton style={{backgroundColor: lightTheme.palette.primary.main }}>
+											<MessageIcon/>
+										</IconButton>
+									</Grid>
+									<Grid item>
+										<IconButton style={{backgroundColor: lightTheme.palette.primary.main }}>
+											<NotificationsIcon/>
+										</IconButton>
+									</Grid>
+									<Grid item>
+										<IconButton style={{backgroundColor: lightTheme.palette.primary.main }}>
+											<ArrowDropDownIcon/>
+										</IconButton>
+									</Grid>
 							</Grid>
 						</Grid>
 					</Grid>
