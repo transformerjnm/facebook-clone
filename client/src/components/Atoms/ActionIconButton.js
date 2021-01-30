@@ -1,5 +1,6 @@
-import { Box, Button, FormControl, Typography } from '@material-ui/core'; 
+import { Box, Button, FormControl, Typography } from '@material-ui/core';
 import { lightTheme } from '../../theme';
+
 /**
  * Summary: 
  * Button that has text and a icon. When clicked it fires an action.
@@ -14,21 +15,19 @@ export default props => {
 		display: 'flex',
 		justifyContent: 'center',
 	};
+
 	const centerButtonStyle = {
-		margin: 'auto'
-	}
+		width: '100%'
+	};
+
 	return (
-		<>
-			<FormControl fullWidth hiddenLabel>
-				<Button style={centerButtonStyle} onClick={() => props.buttonAction()}>
-					<Box mr={1.5} style={boxStyles}>
-						{props.children}
-					</Box>
-					<Box mr="auto" style={boxStyles}>
-						<Typography style={{color: lightTheme.palette.text.secondary}} variant="body1">{props.buttonText}</Typography>
-					</Box>
-				</Button>
-			</FormControl>
-		</>
+		<FormControl fullWidth hiddenLabel>
+			<Button style={centerButtonStyle} onClick={() => props.buttonAction()}>
+				<Box style={boxStyles}>
+					{props.children}
+					<Typography style={{ color: lightTheme.palette.text.secondary, marginLeft: '1rem' }} variant="body1">{props.buttonText}</Typography>
+				</Box>
+			</Button>
+		</FormControl>
 	);
-}
+};

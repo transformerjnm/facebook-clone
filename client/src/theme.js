@@ -68,7 +68,7 @@ lightTheme.typography.subtitle1 = {
   fontWeight: 'normal'
 };
 lightTheme.typography.body1 = {
-  fontSize: 'calc(.8rem + 1vmin)',
+  fontSize: 'calc(.9rem + .25vmin)',
   color: '#313639'
 }
 
