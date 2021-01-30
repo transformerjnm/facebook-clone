@@ -28,7 +28,7 @@ export default props => {
   	return (
     	<div style={headerContainer}>
      		<Grid container alignItems="center">
-				<Grid item md={3}>
+				<Grid item lg={3}>
 					<Grid container alignItems="center">
 						<Grid item>
 							<CircleImageWithTextInput 
@@ -40,7 +40,7 @@ export default props => {
 						</Grid>
 					</Grid>
 				</Grid>
-				<Grid item md={6}>
+				<Grid item lg={6}>
 					<Grid container justify="center" alignItems="center">
 						<Grid item>
 							<NavigationIconLink navLinkDestination="/home">
@@ -64,7 +64,7 @@ export default props => {
 						</Grid>
 					</Grid>
 				</Grid>
-				<Grid item md={3}>
+				<Grid item lg={3}>
 					<Grid container alignItems="center" justify="center" spacing={4}>
 						<Grid item>
 							<Grid container justify="flex-start">
