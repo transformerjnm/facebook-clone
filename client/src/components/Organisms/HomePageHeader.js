@@ -1,4 +1,4 @@
-import { Grid, IconButton, Hidden, Icon } from '@material-ui/core';
+import { Grid, IconButton, Hidden } from '@material-ui/core';
 import NavigationIconLink from '../Atoms/NavigationIconLink';
 import CircleImageWithTextInput from '../Molecules/CircleImageWithTextInput';
 import HomeIcon from '@material-ui/icons/Home';
@@ -18,8 +18,7 @@ import PersonIcon from '@material-ui/icons/Person';
 
 /**
  * Summary:
- * Responsive header for navigating the application. At the current stage in development we want this to be responsive and have dummy links.
- * The mobile menu should work.
+ *Header where you can search and navigate the application. 
  * 
  * Props: 
  * userProfileImage: a string that is used to set a image's src attribute
@@ -40,7 +39,6 @@ export default props => {
 	return (
 		<div style={headerContainer}>
 			<Grid container alignItems="center">
-
 				<Grid item lg={3} md={2} xs={3}>
 					<Grid container alignItems="center">
 						{/**Desktop search bar */}
@@ -71,7 +69,6 @@ export default props => {
 						</Hidden>
 					</Grid>
 				</Grid>
-
 				{/** tablet and up navigation links */}
 				<Hidden smDown>
 					<Grid item lg={5} md={6}>
@@ -106,7 +103,6 @@ export default props => {
 						</Grid>
 					</Grid>
 				</Hidden>
-
 				<Grid item lg={4} md={4} xs={9}>
 					<Grid container alignItems="center" justify="flex-end" spacing={2}>
 						<Grid item >
@@ -158,7 +154,6 @@ export default props => {
 						</Grid>
 					</Grid>
 				</Grid>
-
 			</Grid>
 		</div>
 	);
