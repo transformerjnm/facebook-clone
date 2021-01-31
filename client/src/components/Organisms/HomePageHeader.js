@@ -1,4 +1,4 @@
-import { Grid, IconButton } from '@material-ui/core';  
+import { Grid, IconButton, Hidden } from '@material-ui/core';  
 import NavigationIconLink from '../Atoms/NavigationIconLink';
 import CircleImageWithTextInput from '../Molecules/CircleImageWithTextInput';
 import HomeIcon from '@material-ui/icons/Home';
@@ -10,7 +10,9 @@ import AddIcon from '@material-ui/icons/Add';
 import MessageIcon from '@material-ui/icons/Message';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import SearchIcon from '@material-ui/icons/Search';
 import { lightTheme } from '../../theme';
+import CircleImage from '../Atoms/CircleImage';
 /**
  * Summary:
  * Responsive header for navigating the application. At the current stage in development we want this to be responsive and have dummy links.
@@ -31,12 +33,21 @@ export default props => {
 				<Grid item lg={3}>
 					<Grid container alignItems="center">
 						<Grid item>
-							<CircleImageWithTextInput 
-								inputVariant="search"
-								imageSrc="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"					
-								imageAlt="fb"
-								onImageClickDestination="/home"
-							/>
+							<Hidden mdDown>
+								<CircleImageWithTextInput 
+									inputVariant="search"
+									imageSrc="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"					
+									imageAlt="fb"
+									onImageClickDestination="/home"
+								/>
+							</Hidden>
+							<Hidden lgUp>
+								<CircleImage
+									src="https://cdn.iconscout.com/icon/free/png-256/facebook-224-498412.png"
+									alt="fb"
+									onImageClickDestination="/home"
+								/>
+							</Hidden>
 						</Grid>
 					</Grid>
 				</Grid>
