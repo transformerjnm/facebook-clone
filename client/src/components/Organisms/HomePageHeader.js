@@ -108,8 +108,8 @@ export default props => {
 				</Hidden>
 
 				<Grid item lg={4} md={4} xs={9}>
-					<Grid container alignItems="center" justify="flex-end" spacing={4}>
-						<Grid item xs={10} lg={6}>
+					<Grid container alignItems="center" justify="flex-end" spacing={2}>
+						<Grid item >
 							<Grid container justify="flex-end" spacing={1}>
 								{/**menu Icon to show on phones and tablets */}
 								<Hidden lgUp>
@@ -120,7 +120,7 @@ export default props => {
 									</Grid>
 								</Hidden>
 								{/** User profile link to show on laptops and up */}
-								<Hidden mdDown lg={6}>
+								<Hidden mdDown >
 									<Grid item>
 										<Grid container justify="flex-start">
 											<CircleImageWithTitle
@@ -135,7 +135,6 @@ export default props => {
 								<Grid item>
 									<IconButton
 										style={{ backgroundColor: lightTheme.palette.primary.main }}
-										size="medium"
 									>
 										<AddIcon />
 									</IconButton>
