@@ -5,6 +5,7 @@ import EmojiEmotionsIcon from '@material-ui/icons/EmojiEmotions';
 import ImageIcon from '@material-ui/icons/Image';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import SendIcon from '@material-ui/icons/Send';
+import { lightTheme } from '../../theme';
 
 /**
  * Summary:
@@ -53,11 +54,11 @@ export default ({ variant }) => {
 			<FormControl hiddenLabel fullWidth>
 				<FilledInput
 					style={searchStyles}
-					margin="dense"
-					disableUnderline={true}
-					placeholder="Search Facebook"
-					startAdornment={
-						<SearchIcon color="primary" />
+					margin="dense" 
+					disableUnderline={true}  
+					placeholder="Search Facebook" 
+					startAdornment={ 
+						<SearchIcon color={lightTheme.palette.primary.light}/>
 					}
 				/>
 			</FormControl>

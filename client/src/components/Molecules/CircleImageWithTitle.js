@@ -17,7 +17,7 @@ export default props => {
 	return (
 		<Grid container spacing={1} alignItems="center">
 			<Grid item >
-				<CircleImage src={props.imageUrl} alt={props.imageAlt} clickAction={props.imageClick} />
+				<CircleImage src={props.imageUrl} alt={props.imageAlt} onImageClickDestination={props.imageClick} />
 			</Grid>
 			<Grid item>
 				<Typography variant="subtitle2">{props.title}</Typography>
