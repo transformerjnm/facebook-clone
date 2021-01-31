@@ -1,4 +1,4 @@
-import { useState } from 'react';  
+import { useState } from 'react';
 import { FilledInput, FormControl, IconButton, Grid } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import EmojiEmotionsIcon from '@material-ui/icons/EmojiEmotions';
@@ -37,6 +37,9 @@ export default ({ variant }) => {
 	const commentStyles = {
 		borderRadius: '50px',
 	};
+	const newPostStyles = {
+		borderRadius: '50px',
+	};
 
 	const checkIfTypingToRenderIcon = () => {
 		if (isTyping) {
@@ -66,31 +69,31 @@ export default ({ variant }) => {
 				<Grid item xs={3} md={2}>
 					<Grid container justify="flex-end">
 						<IconButton size="small">
-							<ImageIcon color="secondary"/>
+							<ImageIcon color="secondary" />
 						</IconButton>
 					</Grid>
 				</Grid>
 				<Grid item xs={7} md={8}>
-					<FilledInput 
+					<FilledInput
 						style={messageStyles}
-						disableUnderline={true} 
-						margin="dense" 
-						placeholder="Aa" 
+						disableUnderline={true}
+						margin="dense"
+						placeholder="Aa"
 						multiline
 						fullWidth
 						endAdornment={
-								<IconButton size="small">
-								<EmojiEmotionsIcon color="secondary"/>
+							<IconButton size="small">
+								<EmojiEmotionsIcon color="secondary" />
 							</IconButton>
 						}
-						onKeyPress={ () => setIsTyping(true) }
+						onKeyPress={() => setIsTyping(true)}
 					/>
 				</Grid>
 				<Grid item md={2}>
 					<Grid container alignItems="center" justify="flex-start">
 						<IconButton size="small">
-							{ checkIfTypingToRenderIcon() }
-						</IconButton> 
+							{checkIfTypingToRenderIcon()}
+						</IconButton>
 					</Grid>
 				</Grid>
 			</Grid>
@@ -98,25 +101,37 @@ export default ({ variant }) => {
 	} else if (variant === "comment") {
 		input = (
 			<FormControl hiddenLabel fullWidth>
-				<FilledInput 
+				<FilledInput
 					style={commentStyles}
-					disableUnderline={true} 
-					margin="dense" 
-					placeholder="Write a comment..." 
+					disableUnderline={true}
+					margin="dense"
+					placeholder="Write a comment..."
 					fullWidth
 					endAdornment={
 						<IconButton size="small">
-							<EmojiEmotionsIcon color="secondary"/>
+							<EmojiEmotionsIcon color="secondary" />
 						</IconButton>
 					}
 				/>
-			</FormControl>	
-		);		
+			</FormControl>
+		);
+	} else if (variant === "newPost") {
+		input = (
+			<FormControl hiddenLabel fullWidth>
+				<FilledInput
+					style={newPostStyles}
+					disableUnderline={true}
+					margin="dense"
+					placeholder="What's on your mind?"
+					fullWidth
+				/>
+			</FormControl>
+		);
 	}
-	
-  	return (
-    	<>
-			{input}	 
-    	</>
-  	);
+
+	return (
+		<>
+			{input}
+		</>
+	);
 };
