@@ -1,5 +1,4 @@
-import { createMuiTheme, Typography, IconButton, Icon, Container, Grid, Hidden } from '@material-ui/core';
-import ThumbUpIcon from '@material-ui/icons/ThumbUp';
+import { Typography, Container, Grid, Hidden } from '@material-ui/core';
 import CreateNewPost from '../Organisms/CreateNewPost';
 import HomePageHeader from '../Organisms/HomePageHeader';
 import UnorderedListOfImagesWithText from '../Organisms/UnorderedListOfImagesWithText';
@@ -33,36 +32,37 @@ export default props => {
 					<Grid item md={3}>
 						<UnorderedListOfImagesWithText 
 							listItemsArray={ [
-								{
-									image: <HomeIcon fontSize="large"/>,
-									name: 'Home',
-									action: null
-								},
-								{
-									image: <PeopleIcon fontSize="large" />,
-									name: 'Friends',
-									action: null
-								},
-								{
-									image: <StorefrontIcon fontSize="large" />,
-									name: 'Marketplace',
-									action: null
-								},
-								{
-									image: <BookmarkIcon fontSize="large" />,
-									name: 'Save',
-									action: null
-								},
-								{
-									image: <CircleImage 
-										alt="girl" 
-										onImageClickDestination="/"
-										src="https://images.unsplash.com/photo-1563306406-e66174fa3787?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8Z2lybHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" 
-									/>,
-									name: 'Mary', 
-									action: null,										
-								}
-							] } 
+									{
+										image: <HomeIcon fontSize="large"/>,
+										name: 'Home',
+										action: null
+									},
+									{
+										image: <PeopleIcon fontSize="large" />,
+										name: 'Friends',
+										action: null
+									},
+									{
+										image: <StorefrontIcon fontSize="large" />,
+										name: 'Marketplace',
+										action: null
+									},
+									{
+										image: <BookmarkIcon fontSize="large" />,
+										name: 'Save',
+										action: null
+									},
+									{
+										image: <CircleImage 
+											alt="girl" 
+											onImageClickDestination="/"
+											src="https://images.unsplash.com/photo-1563306406-e66174fa3787?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8Z2lybHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60" 
+										/>,
+										name: 'Mary', 
+										action: null,										
+									}
+								] 
+							} 
 						/>
 					</Grid>
 				</Hidden>
@@ -151,7 +151,8 @@ export default props => {
 						{/** TODO: Typographyt should be made into its own componetn with search icon */}
 						<Typography>Contacts</Typography>
 						<UnorderedListOfImagesWithText 
-							listItemsArray={ [
+							listItemsArray={ 
+								[
 									{
 									image: <CircleImage 
 										alt="girl" 
@@ -201,7 +202,8 @@ export default props => {
 									name: 'Mary', 
 									action: null,										
 									}
-								] } 
+								] 
+							} 
 						/>
 					</Grid>
 				</Hidden>

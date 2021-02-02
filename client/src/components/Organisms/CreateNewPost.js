@@ -38,9 +38,14 @@ export default props => {
 	let updateFeeling = () => {
 		console.log("feeling");
 	};
+	let paperStyles = {
+		padding: '1rem',
+		marginTop: '1.5rem',
+		marginBottom: '1.5rem'
+	};
 
 	return (
-		<Paper style={{ padding: "1rem" }}>
+		<Paper style={paperStyles}>
 			<CircleImageWithTextInput
 				inputVariant={props.inputVariant}
 				imageSrc={props.imageSrc}
