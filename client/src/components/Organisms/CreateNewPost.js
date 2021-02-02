@@ -26,6 +26,11 @@ export default props => {
 	const iconHeightStyles = {
 		fontsize: "24px"
 	};
+	const paperStyles = {
+		padding: '1rem',
+		marginTop: '1.5rem',
+		marginBottom: '1.5rem'
+	};
 
 	let startLiveVideo = () => {
 		console.log("Start live video");
@@ -37,11 +42,6 @@ export default props => {
 
 	let updateFeeling = () => {
 		console.log("feeling");
-	};
-	let paperStyles = {
-		padding: '1rem',
-		marginTop: '1.5rem',
-		marginBottom: '1.5rem'
 	};
 
 	return (
