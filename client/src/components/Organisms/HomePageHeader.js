@@ -33,7 +33,12 @@ import PersonIcon from '@material-ui/icons/Person';
 export default props => {
 	const headerContainer = {
 		height: '56px',
-		backgroundColor: lightTheme.palette.primary.light
+		backgroundColor: lightTheme.palette.primary.light,
+		padding: '0 1rem'
+	};
+	const iconButtonStyles = {
+		backgroundColor: lightTheme.palette.primary.main,
+		padding: '6px'
 	};
 
 	return (
@@ -71,7 +76,7 @@ export default props => {
 				</Grid>
 				{/** tablet and up navigation links */}
 				<Hidden smDown>
-					<Grid item lg={5} md={6}>
+					<Grid item lg={6} md={6}>
 						<Grid container justify="center" alignItems="center">
 							<Grid item>
 								<NavigationIconLink navLinkDestination="/home">
@@ -103,15 +108,15 @@ export default props => {
 						</Grid>
 					</Grid>
 				</Hidden>
-				<Grid item lg={4} md={4} xs={9}>
+				<Grid item lg={3} md={4} xs={9}>
 					<Grid container alignItems="center" justify="flex-end" spacing={2}>
 						<Grid item >
-							<Grid container justify="flex-end" spacing={1}>
+							<Grid container alignItems="center" justify="flex-end" spacing={1}>
 								{/**menu Icon to show on phones and tablets */}
 								<Hidden lgUp>
 									<Grid item>
 										<IconButton onClick={() => props.setShowIcons(!props.showIcons)}>
-											<MenuIcon />
+											<MenuIcon fontSize="large" />
 										</IconButton>
 									</Grid>
 								</Hidden>
@@ -129,24 +134,22 @@ export default props => {
 									</Grid>
 								</Hidden>
 								<Grid item>
-									<IconButton
-										style={{ backgroundColor: lightTheme.palette.primary.main }}
-									>
+									<IconButton style={iconButtonStyles}>
 										<AddIcon />
 									</IconButton>
 								</Grid>
 								<Grid item>
-									<IconButton style={{ backgroundColor: lightTheme.palette.primary.main }}>
+									<IconButton style={iconButtonStyles}>
 										<MessageIcon />
 									</IconButton>
 								</Grid>
 								<Grid item>
-									<IconButton style={{ backgroundColor: lightTheme.palette.primary.main }}>
+									<IconButton style={iconButtonStyles}>
 										<NotificationsIcon />
 									</IconButton>
 								</Grid>
 								<Grid item>
-									<IconButton style={{ backgroundColor: lightTheme.palette.primary.main }}>
+									<IconButton style={iconButtonStyles}>
 										<ArrowDropDownIcon />
 									</IconButton>
 								</Grid>
