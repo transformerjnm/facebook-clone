@@ -1,10 +1,11 @@
 import { Typography, Grid, Divider } from '@material-ui/core';
 import ActionIconButton from '../Atoms/ActionIconButton';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt';
-import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
+import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 import ReplyIcon from '@material-ui/icons/Reply';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import { lightTheme } from '../../theme';
+
 /**
  * Summary:
  * Group of buttons that appear on the bottom of all post. Shows how many interaction you have and allows you to like, comments, and share on post.
@@ -63,7 +64,7 @@ export default props => {
 				<ActionIconButton buttonText="Like" buttonAction={props.addLikeToPost}><ThumbUpAltIcon style={secondaryTextStyle} /></ActionIconButton>
 			</Grid>
 			<Grid item xs={4}>
-				<ActionIconButton buttonText="Comment" buttonAction={props.openCommentsForPost}><ChatBubbleOutlineIcon style={secondaryTextStyle} /></ActionIconButton>
+				<ActionIconButton buttonText="Comment" buttonAction={props.openCommentsForPost}><ChatBubbleIcon style={secondaryTextStyle} /></ActionIconButton>
 			</Grid>
 			<Grid item xs={4}>
 				<ActionIconButton buttonText="Share" buttonAction={props.sharePost}><ReplyIcon style={secondaryTextStyle} /></ActionIconButton>
