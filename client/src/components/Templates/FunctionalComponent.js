@@ -1,4 +1,4 @@
-import { } from '@material-ui/core';  
+import { } from '@material-ui/core';
 
 /**
  * Summary:
@@ -7,9 +7,9 @@ import { } from '@material-ui/core';
  * 
  */
 export default props => {
-  	return (
-    	<>
-     		<p>Functional Component Template</p>
-    	</>
-  	);
-}
+	return (
+		<>
+			<p>Functional Component Template</p>
+		</>
+	);
+};

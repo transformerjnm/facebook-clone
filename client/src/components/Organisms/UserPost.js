@@ -155,7 +155,7 @@ export default props => {
 	};
 
 	return (
-		<Card variant="outlined">
+		<Card variant="outlined" style={{ margin: '1.5rem 0' }}>
 			<CardContent>
 				<CircleImageWithTitle
 					imageUrl={props.authorImageUrl}

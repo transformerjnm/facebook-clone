@@ -1,10 +1,5 @@
 import { Grid, IconButton, Hidden } from '@material-ui/core';
-import NavigationIconLink from '../Atoms/NavigationIconLink';
 import CircleImageWithTextInput from '../Molecules/CircleImageWithTextInput';
-import HomeIcon from '@material-ui/icons/Home';
-import LiveTvIcon from '@material-ui/icons/LiveTv';
-import StorefrontIcon from '@material-ui/icons/Storefront';
-import GroupIcon from '@material-ui/icons/Group';
 import CircleImageWithTitle from '../Molecules/CircleImageWithTitle';
 import AddIcon from '@material-ui/icons/Add';
 import MessageIcon from '@material-ui/icons/Message';
@@ -14,7 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import { lightTheme } from '../../theme';
 import CircleImage from '../Atoms/CircleImage';
-import PersonIcon from '@material-ui/icons/Person';
+import IconNavigation from '../Molecules/IconNavigation';
 
 /**
  * Summary:
@@ -33,7 +28,12 @@ import PersonIcon from '@material-ui/icons/Person';
 export default props => {
 	const headerContainer = {
 		height: '56px',
-		backgroundColor: lightTheme.palette.primary.light
+		backgroundColor: lightTheme.palette.primary.light,
+		padding: '0 1rem'
+	};
+	const iconButtonStyles = {
+		backgroundColor: lightTheme.palette.primary.main,
+		padding: '6px'
 	};
 
 	return (
@@ -71,47 +71,19 @@ export default props => {
 				</Grid>
 				{/** tablet and up navigation links */}
 				<Hidden smDown>
-					<Grid item lg={5} md={6}>
-						<Grid container justify="center" alignItems="center">
-							<Grid item>
-								<NavigationIconLink navLinkDestination="/home">
-									<HomeIcon />
-								</NavigationIconLink>
-							</Grid>
-							<Grid item>
-								<NavigationIconLink navLinkDestination="/friends">
-									<PersonIcon />
-								</NavigationIconLink>
-							</Grid>
-							<Grid item>
-								<NavigationIconLink navLinkDestination="/live">
-									<LiveTvIcon />
-								</NavigationIconLink>
-							</Grid>
-							<Grid item>
-								<NavigationIconLink navLinkDestination="/marketplace">
-									<StorefrontIcon />
-								</NavigationIconLink>
-							</Grid>
-							<Hidden mdDown>
-								<Grid item>
-									<NavigationIconLink navLinkDestination="/group">
-										<GroupIcon />
-									</NavigationIconLink>
-								</Grid>
-							</Hidden>
-						</Grid>
+					<Grid item lg={6} md={6}>
+						<IconNavigation />
 					</Grid>
 				</Hidden>
-				<Grid item lg={4} md={4} xs={9}>
+				<Grid item lg={3} md={4} xs={9}>
 					<Grid container alignItems="center" justify="flex-end" spacing={2}>
 						<Grid item >
-							<Grid container justify="flex-end" spacing={1}>
+							<Grid container alignItems="center" justify="flex-end" spacing={1}>
 								{/**menu Icon to show on phones and tablets */}
 								<Hidden lgUp>
 									<Grid item>
 										<IconButton onClick={() => props.setShowIcons(!props.showIcons)}>
-											<MenuIcon />
+											<MenuIcon fontSize="large" />
 										</IconButton>
 									</Grid>
 								</Hidden>
@@ -129,24 +101,22 @@ export default props => {
 									</Grid>
 								</Hidden>
 								<Grid item>
-									<IconButton
-										style={{ backgroundColor: lightTheme.palette.primary.main }}
-									>
+									<IconButton style={iconButtonStyles}>
 										<AddIcon />
 									</IconButton>
 								</Grid>
 								<Grid item>
-									<IconButton style={{ backgroundColor: lightTheme.palette.primary.main }}>
+									<IconButton style={iconButtonStyles}>
 										<MessageIcon />
 									</IconButton>
 								</Grid>
 								<Grid item>
-									<IconButton style={{ backgroundColor: lightTheme.palette.primary.main }}>
+									<IconButton style={iconButtonStyles}>
 										<NotificationsIcon />
 									</IconButton>
 								</Grid>
 								<Grid item>
-									<IconButton style={{ backgroundColor: lightTheme.palette.primary.main }}>
+									<IconButton style={iconButtonStyles}>
 										<ArrowDropDownIcon />
 									</IconButton>
 								</Grid>
