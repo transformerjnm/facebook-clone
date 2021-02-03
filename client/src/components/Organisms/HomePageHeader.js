@@ -1,10 +1,5 @@
 import { Grid, IconButton, Hidden } from '@material-ui/core';
-import NavigationIconLink from '../Atoms/NavigationIconLink';
 import CircleImageWithTextInput from '../Molecules/CircleImageWithTextInput';
-import HomeIcon from '@material-ui/icons/Home';
-import LiveTvIcon from '@material-ui/icons/LiveTv';
-import StorefrontIcon from '@material-ui/icons/Storefront';
-import GroupIcon from '@material-ui/icons/Group';
 import CircleImageWithTitle from '../Molecules/CircleImageWithTitle';
 import AddIcon from '@material-ui/icons/Add';
 import MessageIcon from '@material-ui/icons/Message';
@@ -14,7 +9,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import { lightTheme } from '../../theme';
 import CircleImage from '../Atoms/CircleImage';
-import PersonIcon from '@material-ui/icons/Person';
+import IconNavigation from '../Molecules/IconNavigation';
 
 /**
  * Summary:
@@ -77,35 +72,7 @@ export default props => {
 				{/** tablet and up navigation links */}
 				<Hidden smDown>
 					<Grid item lg={6} md={6}>
-						<Grid container justify="center" alignItems="center">
-							<Grid item>
-								<NavigationIconLink navLinkDestination="/home">
-									<HomeIcon />
-								</NavigationIconLink>
-							</Grid>
-							<Grid item>
-								<NavigationIconLink navLinkDestination="/friends">
-									<PersonIcon />
-								</NavigationIconLink>
-							</Grid>
-							<Grid item>
-								<NavigationIconLink navLinkDestination="/live">
-									<LiveTvIcon />
-								</NavigationIconLink>
-							</Grid>
-							<Grid item>
-								<NavigationIconLink navLinkDestination="/marketplace">
-									<StorefrontIcon />
-								</NavigationIconLink>
-							</Grid>
-							<Hidden mdDown>
-								<Grid item>
-									<NavigationIconLink navLinkDestination="/group">
-										<GroupIcon />
-									</NavigationIconLink>
-								</Grid>
-							</Hidden>
-						</Grid>
+						<IconNavigation />
 					</Grid>
 				</Hidden>
 				<Grid item lg={3} md={4} xs={9}>
